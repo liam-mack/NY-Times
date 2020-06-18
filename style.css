@@ -1,0 +1,11 @@
+.jumbotron{
+    background-color:darkblue;
+    color: white;
+    border-radius: 0cm;
+}
+.card {
+    margin: 2em;
+}
+.card-header{
+    text-align: center;
+}
