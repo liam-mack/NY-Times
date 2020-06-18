@@ -1,3 +1,20 @@
-var url = https://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=20120101&end_date=20120101&q=test&
+var queryURL= 'https://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date='+ startY+  '&end_date=' + endY+ '&q=' + search + key ;
+var key= '&api-key=f69a18d9-a454-4495-9d23-f5012fb7b6b1';
 
-var key = "api-key=BeJaPfj7Cq5iLNLXhd1HBy0i99myj75b"
+
+var search = $('#search-term"')
+
+
+var startYear = $('#start-year')
+ var startY = startYear.val()
+startYear.trim()
+var endYear = $('end-year')
+var endY = endYear.val()
+endYear.trim()
+
+$.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(queryURL);
+    
