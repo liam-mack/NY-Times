@@ -1,5 +1,5 @@
 $("#run-search").on("click", function(){
-event.preventDefault()
+event.preventDefault();
 var key= "BeJaPfj7Cq5iLNLXhd1HBy0i99myj75b";
 var search = $("#search-term").val();
 var startYear = $("#start-year").val();
@@ -25,7 +25,12 @@ $.ajax({
     $("byline").text(byline);
     // console.log(byline);
     $("#article-section").append(abstract);
-    $("#article-section").append("<br>",byline,"<br>");
+    $("#article-section").append("<br>",byline,"<br>","<br>");
     })
   })
+})
+
+$("#clear-all").on("click", function(){
+  event.preventDefault();
+  $("#article-section").empty();
 })
